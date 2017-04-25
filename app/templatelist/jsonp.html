@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>自定义jsonp</title>
+        
+    </head>
+   
+    <body>
+
+    </body>
+</html>
+ <script src="jsonp.js"></script>
+    <script>
+   (function(){
+   	   $jsonp("https://api.douban.com/v2/movie/in_theaters",
+   	   {start:5,count:10},
+   	   function(data){
+         console.log(data);
+   	   });
+   })();
+    </script>
